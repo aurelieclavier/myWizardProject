@@ -6,13 +6,7 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="toto" class="fr.wildcodeschool.thewizardproject.models.Outfit">
-    </bean>
-
-    <!-- Bean of the wizard interface -->
-    <bean id="wizardId" class="fr.wildcodeschool.thewizardproject.models.Gandalf">
-        <!-- Injection in the constructor : -->
-        <constructor-arg ref="toto"/>
-    </bean>
+    <context:component-scan base-package="fr.wildcodeschool.thewizardproject.models">
+    </context:component-scan>
 
 </beans>
